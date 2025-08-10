@@ -357,6 +357,7 @@
                                             $payment_amount = $row['payment_amount'];
                                             $status = $row['status'];
                                             $room_no = $row['room_no'];
+                                            $gst_provided = $row['gst_provided'];
                                             $days = (strtotime($checkOutDate) - strtotime($checkInDate)) / (60 * 60 * 24);
                                             $note = "NOTE : " . $row['note'];
 
@@ -443,6 +444,9 @@
                                                             Rest Amount: <strong><i class="bi bi-currency-rupee"></i><?php echo $rest_amount; ?></strong>
                                                         </div>
                                                     <?php } ?>
+                                                    <div class="icon-text">
+                                                        <i class="bi bi-receipt"></i> <strong>GST:</strong> <?php echo isset($gst_provided) && $gst_provided == 1 ? '<span class="badge bg-success">Provided</span>' : '<span class="badge bg-warning">Not Provided</span>'; ?>
+                                                    </div>
 
                                                     <div class="icon-text">
                                                         <strong><?php echo $status_payment; ?></strong>
