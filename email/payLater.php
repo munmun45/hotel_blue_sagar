@@ -106,7 +106,7 @@ if ($resultRooms && $resultRooms->num_rows > 0) {
             $lastIdQuery = "SELECT MAX(id) AS last_id FROM bookings";
             $result = $conn->query($lastIdQuery);
             $lastId = $result->num_rows > 0 ? $result->fetch_assoc()['last_id'] + 1 : 1; // Increment by 1 or start at 1
-            $bookingId = "AH" . str_pad($lastId, 5, "0", STR_PAD_LEFT); // Format like H4W00001
+            $bookingId = "HBS" . str_pad($lastId, 5, "0", STR_PAD_LEFT); // Format like H4W00001
 
             // Compute all required values
             $extra_guest = $extraAdults; // Ensure non-negative extra guests

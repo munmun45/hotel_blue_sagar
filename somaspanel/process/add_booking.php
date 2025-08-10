@@ -96,7 +96,7 @@ if (!isset($_POST['id'])) {
             $lastIdQuery = "SELECT MAX(id) AS last_id FROM bookings";
             $result = $conn->query($lastIdQuery);
             $lastId = $result->fetch_assoc()['last_id'] + 1; // Increment by 1
-            $bookingId = "AH" . str_pad($lastId, 5, "0", STR_PAD_LEFT); // Format like H4W0001
+            $bookingId = "HBS" . str_pad($lastId, 5, "0", STR_PAD_LEFT); // Format like H4W0001
         }
 
         // Insert the new booking record
