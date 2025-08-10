@@ -284,6 +284,16 @@
                             <input type="number" class="form-control" id="off" name="off" >
                         </div>
 
+                        <!-- GST Checkbox -->
+                        <div class="col-md-6">
+                            <div class="form-check mt-4">
+                                <input class="form-check-input" type="checkbox" id="gstProvided" name="gstProvided" value="1" checked>
+                                <label class="form-check-label" for="gstProvided">
+                                    GST Information Provided
+                                </label>
+                            </div>
+                        </div>
+
                         <!-- Status Selection -->
                         <div class="col-md-6">
                             <label for="status" class="form-label">Status</label>

@@ -12,6 +12,7 @@ if (!isset($_POST['id'])) {
         $totalGuests = (int) $_POST['totalGuests'];
         $extra_gust = (int) $_POST['extra_gust'];
         $totalRooms = (int) $_POST['totalRooms'];
+        $gstProvided = isset($_POST['gstProvided']) ? 1 : 0;
         $roomType = $conn->real_escape_string($_POST['roomType']);
         $roomPlan = $conn->real_escape_string($_POST['roomPlan']);
         $checkInDate = $conn->real_escape_string($_POST['checkInDate']);
@@ -99,8 +100,8 @@ if (!isset($_POST['id'])) {
         }
 
         // Insert the new booking record
-        $sqlInsert = "INSERT INTO bookings (guest_name, guest_number, email, total_guests, extra_gust, total_rooms, room_type, room_plan, check_in_date, check_out_date, booking_platform, booking_id, off_percentage, status, room_price, pan_price, extra_adult_price, amount)
-                      VALUES ('$guestName', '$guestNumber', '$guestEmail', '$totalGuests', '$extra_gust', '$totalRooms', '$roomType', '$roomPlan', '$checkInDate', '$checkOutDate', '$bookingPlatform', '$bookingId', '$off', '$status', '$roomPrice', '$foodPlanCost', '$extraGuestPrice', '$finalAmount')";
+        $sqlInsert = "INSERT INTO bookings (guest_name, guest_number, email, total_guests, extra_gust, total_rooms, room_type, room_plan, check_in_date, check_out_date, booking_platform, booking_id, off_percentage, status, room_price, pan_price, extra_adult_price, amount, gst_provided)
+                      VALUES ('$guestName', '$guestNumber', '$guestEmail', '$totalGuests', '$extra_gust', '$totalRooms', '$roomType', '$roomPlan', '$checkInDate', '$checkOutDate', '$bookingPlatform', '$bookingId', '$off', '$status', '$roomPrice', '$foodPlanCost', '$extraGuestPrice', '$finalAmount', '$gstProvided')";
 
         if ($conn->query($sqlInsert) === TRUE) {
             echo "<script>alert('New booking saved successfully.'); window.location.href = '../booking_manager';</script>";
