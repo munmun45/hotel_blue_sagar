@@ -36,33 +36,76 @@
 
 
 
+        <section class="mil-banner">
+
+<video autoplay loop muted playsinline class="mil-shape video_index" style="width: 110%; top: 0%; left: 0%; object-fit: cover;">
+    <source src="./video/main2.mp4" type="video/mp4">
+    Your browser does not support the video tag.
+</video>
 
 
-        <!-- slider -->
-        <div class="image-slider">
-            <div class="swiper">
-                <div class="swiper-wrapper">
-                    <div class="swiper-slide">
-                        <img src="./img/slider/1.jpg" alt="Luxury Room">
+<div class="container">
+
+    <div class="row align-items-center">
+        <div class="col-xl-10">
+
+            <div class="mil-banner-content-frame">
+                <div class="mil-banner-content">
+
+
+                    <div class="mil-search-panel mil-mb-20">
+
+                        <form action="./rooms" method="get">
+                            <div class="mil-form-grid">
+                                <div class="mil-col-5 mil-field-frame">
+                                    <label>Check-in</label>
+                                    <input type="text" class="datepicker-here" data-position="bottom left" placeholder="Select date" autocomplete="off" name="check_in" readonly required>
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-calendar">
+                                        <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect>
+                                        <line x1="16" y1="2" x2="16" y2="6"></line>
+                                        <line x1="8" y1="2" x2="8" y2="6"></line>
+                                        <line x1="3" y1="10" x2="21" y2="10"></line>
+                                    </svg>
+                                </div>
+                                <div class="mil-col-5 mil-field-frame">
+                                    <label>Check-out</label>
+                                    <input type="text" class="datepicker-here" data-position="bottom left" placeholder="Select date" autocomplete="off" name="check_out" readonly required>
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-calendar">
+                                        <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect>
+                                        <line x1="16" y1="2" x2="16" y2="6"></line>
+                                        <line x1="8" y1="2" x2="8" y2="6"></line>
+                                        <line x1="3" y1="10" x2="21" y2="10"></line>
+                                    </svg>
+                                </div>
+                                <div class="mil-col-2 mil-field-frame">
+                                    <label>Adults</label>
+                                    <input type="text" placeholder="Enter quantity" value="1" name="adult">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-users">
+                                        <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
+                                        <circle cx="9" cy="7" r="4"></circle>
+                                        <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
+                                        <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
+                                    </svg>
+                                </div>
+                            </div>
+                            <button type="submit">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-search">
+                                    <circle cx="11" cy="11" r="8"></circle>
+                                    <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+                                </svg>
+                                <span>Search</span>
+                            </button>
+                        </form>
                     </div>
-                    <div class="swiper-slide">
-                        <img src="./img/slider/2.jpg" alt="Dining Area">
-                    </div>
-                    <div class="swiper-slide">
-                        <img src="./img/slider/3.jpg" alt="Spa & Wellness">
-                    </div>
+                    <p><span class="mil-accent-2">*</span>Effortless booking for a seamless stay in comfort and style.</p>
                 </div>
-                <!-- Add Pagination -->
-                <div class="swiper-pagination"></div>
-                <!-- Add Navigation -->
-                <div class="swiper-button-next"></div>
-                <div class="swiper-button-prev"></div>
             </div>
+
         </div>
-        
-        <!-- sliderEnd -->
+    </div>
 
-
+</div>
+</section>
 
 
 
@@ -70,7 +113,7 @@
 
 
         <!-- services -->
-        <div class="mil-content-pad mil-p-100-100" style="position: relative; top: -170px;">
+        <div class="mil-content-pad mil-p-100-100" >
         <div class="container">
                 <div class="mil-text-center">
                     <div class="mil-suptitle mil-mb-20 mil-fade-up">Rooms</div>
