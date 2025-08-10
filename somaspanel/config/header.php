@@ -31,6 +31,7 @@
                         data-bs-toggle="modal"
                         data-bs-target="#add_new_booking">
                         <i class="bi bi-plus" style="font-size: 20px;"></i>
+                        <span style="font-size: 12px;">Add New Booking</span>
                     </button>
 
 
@@ -50,7 +51,7 @@
                     <button type="submit" class="btn btn-danger d-flex align-items-center justify-content-center" data-bs-toggle="tooltip"
                         data-bs-placement="bottom"
                         title="Check Room Availability " style="border-radius: 1;">
-                        <i class="bi bi-search"></i>
+                        <i class="bi bi-search"></i> 
                     </button>
                 </form>
 
@@ -178,41 +179,41 @@
                     <div class="row g-3">
                         <!-- Guest Name Field -->
                         <div class="col-md-6">
-                            <label for="guestName" class="form-label">Guest Name</label>
+                            <label for="guestName" class="form-label">Guest Name <span class="text-danger">*</span></label>
                             <input type="text" class="form-control" id="guestName" name="guestName" required>
                         </div>
 
                         <!-- Guest Number Field -->
                         <div class="col-md-6">
-                            <label for="number" class="form-label">Phone Number</label>
+                            <label for="number" class="form-label">Phone Number <span class="text-danger">*</span></label>
                             <input type="text" class="form-control" id="number" name="guestNumber" required>
                         </div>
 
                         <div class="col-md-12">
-                            <label for="email" class="form-label">Email Id</label>
+                            <label for="email" class="form-label">Email Id <span class="text-danger">*</span></label>
                             <input type="email" class="form-control" id="email" name="email" required>
                         </div>
 
                         <!-- Total Guests Field -->
                         <div class="col-md-4">
-                            <label for="totalGuests" class="form-label">Total Guests</label>
+                            <label for="totalGuests" class="form-label">Total Guests <span class="text-danger">*</span></label>
                             <input type="number" class="form-control" id="totalGuests" name="totalGuests" required>
                         </div>
 
                         <div class="col-md-4">
-                            <label for="extra_gust" class="form-label">Extra Gust</label>
+                            <label for="extra_gust" class="form-label">Extra Guest <span class="text-danger">*</span></label>
                             <input type="number" class="form-control" id="extra_gust" name="extra_gust" required>
                         </div>
 
                         <!-- Total Rooms Field -->
                         <div class="col-md-4">
-                            <label for="totalRooms" class="form-label">Total Rooms</label>
+                            <label for="totalRooms" class="form-label">Total Rooms <span class="text-danger">*</span></label>
                             <input type="number" class="form-control" id="totalRooms" name="totalRooms" required>
                         </div>
 
                         <!-- Room Type Selection -->
                         <div class="col-md-6">
-                            <label for="roomType" class="form-label">Room Type</label>
+                            <label for="roomType" class="form-label">Room Type <span class="text-danger">*</span></label>
                             <select class="form-select" id="roomType" name="roomType" required>
                                 <option value="" disabled selected>Select room type</option>
 
@@ -232,7 +233,7 @@
 
                         <!-- Room Plan Selection -->
                         <div class="col-md-6">
-                            <label for="roomPlan" class="form-label">Room Plan</label>
+                            <label for="roomPlan" class="form-label">Room Plan <span class="text-danger">*</span></label>
                             <select class="form-select" id="roomPlan" name="roomPlan" required>
                                 <option value="" disabled selected>Select room plan</option>
                                 <option value="EP">Room Only (EP)</option>
@@ -245,19 +246,19 @@
 
                         <!-- Check-in Date -->
                         <div class="col-md-6">
-                            <label for="checkInDate" class="form-label">Check-in Date</label>
+                            <label for="checkInDate" class="form-label">Check-in Date <span class="text-danger">*</span></label>
                             <input type="date" class="form-control" id="checkInDate" name="checkInDate" required>
                         </div>
 
                         <!-- Check-out Date -->
                         <div class="col-md-6">
-                            <label for="checkOutDate" class="form-label">Check-out Date</label>
+                            <label for="checkOutDate" class="form-label">Check-out Date <span class="text-danger">*</span></label>
                             <input type="date" class="form-control" id="checkOutDate" name="checkOutDate" required>
                         </div>
 
                         <!-- Booking Platform Selection -->
                         <div class="col-md-6">
-                            <label for="bookingPlatform" class="form-label">Booking Platform</label>
+                            <label for="bookingPlatform" class="form-label">Booking Platform <span class="text-danger">*</span></label>
                             <select class="form-select" id="bookingPlatform" name="bookingPlatform" required>
                                 <option value="" disabled selected>Select booking platform</option>
                                 <option value="Website">Website</option>
@@ -267,6 +268,7 @@
                                 <option value="Booking.com">Booking.com</option>
                                 <option value="Hotels.com">Hotels.com</option>
                                 <option value="Agoda">Agoda</option>
+                                <option value="Direct Booking">Direct Booking</option>
                                 <option value="Other">Other</option>
                             </select>
 
@@ -274,7 +276,7 @@
 
                         <!-- Booking ID Field -->
                         <div class="col-md-6">
-                            <label for="bookingId" class="form-label">Booking ID</label>
+                            <label for="bookingId" class="form-label">Booking ID <small class="text-muted">(Optional)</small></label>
                             <input type="text" class="form-control" id="bookingId" name="bookingId">
                         </div>
 
@@ -295,7 +297,7 @@
                         </div>
 
                         <!-- Status Selection -->
-                        <div class="col-md-6">
+                        <div class="col-md-6" style="display: none;">
                             <label for="status" class="form-label">Status</label>
                             <select class="form-select" id="status" name="status" required>
                                 <option value="pending" selected>Pending</option>
